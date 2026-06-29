@@ -1,6 +1,3 @@
-// ChatAPI.js
-// IA texte via HuggingFace (modèle gratuit)
-
 async function askAI(prompt) {
     try {
         const response = await fetch(
@@ -8,11 +5,10 @@ async function askAI(prompt) {
             {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer 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"
                 },
-                body: JSON.stringify({
-                    inputs: prompt
-                })
+                body: JSON.stringify({ inputs: prompt })
             }
         );
 
